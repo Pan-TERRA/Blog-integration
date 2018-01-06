@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B2B18421216B07F1B4BB461 /* Pods_Blog_integrationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717639068FA513F60634A426 /* Pods_Blog_integrationTests.framework */; };
+		412413412001388F008B33BF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412413402001388F008B33BF /* Constants.swift */; };
 		414F552220011AC900CA97AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414F552120011AC900CA97AE /* AppDelegate.swift */; };
 		414F552420011AC900CA97AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414F552320011AC900CA97AE /* ViewController.swift */; };
 		414F552720011AC900CA97AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 414F552520011AC900CA97AE /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		0C5A2462AF09E27A195D2429 /* Pods_Blog_integration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blog_integration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C4EBC429F3D11BA69776E7 /* Pods-Blog-integrationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blog-integrationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blog-integrationTests/Pods-Blog-integrationTests.release.xcconfig"; sourceTree = "<group>"; };
+		412413402001388F008B33BF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		414F551E20011AC900CA97AE /* Blog-integration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blog-integration.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		414F552120011AC900CA97AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		414F552320011AC900CA97AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,10 +68,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4124133C200135F6008B33BF /* Server */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		4124133D20013602008B33BF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				414F552320011AC900CA97AE /* ViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4124133E20013619008B33BF /* System */ = {
+			isa = PBXGroup;
+			children = (
+				414F552120011AC900CA97AE /* AppDelegate.swift */,
+				414F552A20011AC900CA97AE /* LaunchScreen.storyboard */,
+				414F552520011AC900CA97AE /* Main.storyboard */,
+				414F552820011AC900CA97AE /* Assets.xcassets */,
+				412413402001388F008B33BF /* Constants.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		4124133F20013633008B33BF /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		414F551520011AC900CA97AE = {
 			isa = PBXGroup;
 			children = (
 				414F552020011AC900CA97AE /* Blog-integration */,
+				414F552D20011AC900CA97AE /* Info.plist */,
 				414F553520011AC900CA97AE /* Blog-integrationTests */,
 				414F551F20011AC900CA97AE /* Products */,
 				C2DEA0E3DE5BEFC5C63C0DF6 /* Pods */,
@@ -89,12 +126,10 @@
 		414F552020011AC900CA97AE /* Blog-integration */ = {
 			isa = PBXGroup;
 			children = (
-				414F552120011AC900CA97AE /* AppDelegate.swift */,
-				414F552320011AC900CA97AE /* ViewController.swift */,
-				414F552520011AC900CA97AE /* Main.storyboard */,
-				414F552820011AC900CA97AE /* Assets.xcassets */,
-				414F552A20011AC900CA97AE /* LaunchScreen.storyboard */,
-				414F552D20011AC900CA97AE /* Info.plist */,
+				4124133E20013619008B33BF /* System */,
+				4124133C200135F6008B33BF /* Server */,
+				4124133D20013602008B33BF /* UI */,
+				4124133F20013633008B33BF /* Util */,
 			);
 			path = "Blog-integration";
 			sourceTree = "<group>";
@@ -141,6 +176,7 @@
 				414F551C20011AC900CA97AE /* Resources */,
 				362D372765A34553F8A71334 /* [CP] Embed Pods Frameworks */,
 				F93ACC6B16114D71D563CB6E /* [CP] Copy Pods Resources */,
+				414F55432001242A00CA97AE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -329,6 +365,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blog-integration/Pods-Blog-integration-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		414F55432001242A00CA97AE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "DESCRIBE_INFO=$(git describe)\necho \"Build time; Git tag: {$describeInfo}\"\n\nINFO_PLIST=\"${SRCROOT}/Blog-integration/Info\"\nINFO_PLIST_EXT=\"${INFO_PLIST}.plist\"\n\ndefaults write $INFO_PLIST GitTag $DESCRIBE_INFO\n\nplutil -convert xml1 $INFO_PLIST_EXT\n";
+		};
 		8C6BB99B2583B07B6D1B065B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -376,6 +425,7 @@
 			files = (
 				414F552420011AC900CA97AE /* ViewController.swift in Sources */,
 				414F552220011AC900CA97AE /* AppDelegate.swift in Sources */,
+				412413412001388F008B33BF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
