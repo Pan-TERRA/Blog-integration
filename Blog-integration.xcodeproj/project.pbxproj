@@ -106,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				414F552020011AC900CA97AE /* Blog-integration */,
-				414F552D20011AC900CA97AE /* Info.plist */,
 				414F553520011AC900CA97AE /* Blog-integrationTests */,
 				414F551F20011AC900CA97AE /* Products */,
 				C2DEA0E3DE5BEFC5C63C0DF6 /* Pods */,
@@ -126,6 +125,7 @@
 		414F552020011AC900CA97AE /* Blog-integration */ = {
 			isa = PBXGroup;
 			children = (
+				414F552D20011AC900CA97AE /* Info.plist */,
 				4124133E20013619008B33BF /* System */,
 				4124133C200135F6008B33BF /* Server */,
 				4124133D20013602008B33BF /* UI */,
