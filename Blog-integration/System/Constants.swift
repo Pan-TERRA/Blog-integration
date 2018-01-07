@@ -15,7 +15,7 @@ func printCurrentTag() {
 }
 
 func getGitTag() -> String? {
-    guard let path = Bundle.main.path(forResource: "Info", ofType: "plist"), let plist = NSDictionary(contentsOfFile: path), let tag = plist["GitTag"] as? String else {
+    guard let path = Bundle.main.path(forResource: "GitTag", ofType: "plist"), let plist = NSDictionary(contentsOfFile: path), let tag = plist["GitTag"] as? String else {
         return nil
     }
     

@@ -19,6 +19,7 @@ class IntroVC: BasicVC {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        printCurrentTag()
     }
     
     // MARK: - Actions
