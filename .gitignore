@@ -48,3 +48,7 @@ build/*
 profile
 *.xcscheme
 xcschememanagement.plist
+
+# kpi-integration
+GitTag.plist
+
