@@ -13,7 +13,7 @@ pod 'KMPlaceholderTextView'
 
 pod 'Firebase/Core'
 pod 'FirebaseUI/Auth'
-pod 'FirebaseUI/Google'
+pod 'Firebase/Database'
 
 end
 
@@ -29,6 +29,7 @@ pod 'KMPlaceholderTextView'
 
 pod 'Firebase/Core'
 pod 'FirebaseUI/Auth'
+pod 'Firebase/Database'
 
 end
 

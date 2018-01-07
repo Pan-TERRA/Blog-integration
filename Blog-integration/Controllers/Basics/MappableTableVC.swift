@@ -12,7 +12,7 @@ import ObjectMapper
 class MappableTableVC: BasicVC, UITableViewDelegate, UITableViewDataSource {
     
     struct CellIdentifier {
-        static let clubCell = "ClubTVCell"
+        static let userCell = "UserCell"
     }
 
     @IBOutlet weak var tableView: UITableView!
@@ -56,6 +56,8 @@ class MappableTableVC: BasicVC, UITableViewDelegate, UITableViewDataSource {
     
     func setTableView() {
         tableView?.registerNibs([])
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: CellIdentifier.userCell)
     }
     
     func setPullToRefresh() {
@@ -176,15 +178,24 @@ class MappableTableVC: BasicVC, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        if let user = mappables[indexPath.section] as? ProfileModel {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.userCell) ?? UITableViewCell(style: .default, reuseIdentifier: CellIdentifier.userCell)
+            
+            cell.textLabel?.text = user.nickname
+            
+            return cell
+        }
+        
         return UITableViewCell()
     }
     
     // MARK: - TableView Delegate
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        return 0.0
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//
+//        return 0.0
+//    }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return interItemSpacing

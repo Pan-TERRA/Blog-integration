@@ -49,6 +49,8 @@ extension AuthorizationManager: FUIAuthDelegate {
             
             userProfile = user
             
+            APIManager().updateUserProfile()
+            
             let vc = MainVC()
             let navigationVC = UINavigationController(rootViewController: vc)
             navigationVC.setNavigationBarHidden(true, animated: false)

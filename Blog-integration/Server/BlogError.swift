@@ -11,6 +11,8 @@ import Alamofire
 
 class BlogError: Error {
     
+    class DefaultError: Error {}
+    
     let error: Error
     let readableData: String?
     let statusCode: Int?
@@ -19,8 +21,8 @@ class BlogError: Error {
         return error as? AFError
     }
     
-    init(error: Error, readableData: String? = nil, statusCode: Int? = nil) {
-        self.error = error
+    init(error: Error? = nil, readableData: String? = nil, statusCode: Int? = nil) {
+        self.error = error ?? DefaultError()
         self.readableData = readableData
         self.statusCode = statusCode
     }

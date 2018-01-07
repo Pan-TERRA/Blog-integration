@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import ObjectMapper
+import FirebaseDatabase
 
 enum ServerRequestError: Error {
     case emptyResponse
@@ -19,6 +20,7 @@ enum ServerRequestError: Error {
 class APIManager {
     
     let networking = Networking()
+    let reference = Database.database().reference()
     
     init() {}
     
@@ -67,14 +69,25 @@ class APIManager {
 //        networking.makeRequest(path: "get_user", method: .post, parameters: parametrs, headers: nil, success: success, failure: failure)
 //    }
     
-//    func updateUserProfile(form: ProfileForm, success: @escaping (Any)->(), failure: @escaping (BlogError)->()) {
-//        
-//        var parametrs = [String: Any]()
-//        
-//        parametrs["user_id"] = APIModels.shared.userProfile?.userID ?? 0
-//        parametrs["update"] = Mapper<ProfileForm>().toJSON(form)
-//        
-//        networking.makeRequest(path: "update_user", method: .post, parameters: parametrs, headers: nil, success: success, failure: failure)
-//    }
+    func updateUserProfile() {
+        
+        guard let user = AuthorizationManager.shared.userProfile else {
+            return
+        }
+        
+        let form = ["email": user.email!, "nickname": user.displayName!, "id": user.uid]
+        
+        reference.child("users/\(user.uid)").setValue(form)
+    }
     
+    func getUsers(success: @escaping (Any)->(), failure: @escaping (BlogError)->()) {
+        
+        reference.child("users").observeSingleEvent(of: .value, with: { snapshot in
+            
+            success(snapshot.value!)
+            
+        }, withCancel: { error in
+            failure(BlogError(error: error))
+        })
+    }
 }
