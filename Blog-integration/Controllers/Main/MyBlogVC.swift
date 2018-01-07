@@ -31,7 +31,7 @@ class MyBlogVC: BasicVC {
     }
 
     @IBAction func newPostTapped(_ sender: UIButton) {
-        
+        navigationController?.pushViewController(NewPostVC(), animated: true)
     }
 
 }

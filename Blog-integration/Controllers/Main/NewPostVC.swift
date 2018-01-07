@@ -9,27 +9,63 @@
 import UIKit
 
 class NewPostVC: BasicVC {
+    
+    // MARK: - Outlets
+
+    @IBOutlet weak var textView: UITextView!
+
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        hideKeyboardWhenTappedAround()
     }
     
+    // MARK: - Actions
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func sendTapped(_ sender: UIButton) {
+        send()
     }
-    */
+    
+    @IBAction func backTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    private func send() {
+        
+        guard let text = textView.text, !text.isEmpty else {
+            showInfoLabelWithText("Field cannot be empty", controller: self)
+            return
+        }
+        
+        startLoading()
+        
+        APIManager().newPost(text: text, success: { [weak self] response in
+            self?.stopLoading()
+            print(response)
+            self?.navigationController?.popViewController(animated: true)
+        }, failure: { [weak self] error in
+            self?.stopLoading()
+            self?.showAlertWith(text: error.localizedDescription, controller: self)
+        })
+    }
+}
 
+extension NewPostVC: UITextViewDelegate {
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        
+        let newText = (textView.text as NSString).replacingCharacters(in: range, with: text)
+        
+        if text == "\n" {
+            textView.resignFirstResponder()
+            send()
+            return false
+        }
+        
+        return newText.count < 300;
+    }
+    
+    
 }

@@ -6,4 +6,26 @@
 //  Copyright © 2018 Vlad Krut. All rights reserved.
 //
 
-import Foundation
+import ObjectMapper
+
+class PostModel: Mappable {
+    
+    var id: String?
+    var text: String?
+    var date: Date?
+    
+    var userID: String?
+    
+    required init?(map: Map) {}
+    
+    func mapping(map: Map) {
+        
+        id <- map["id"]
+        text <- map["text"]
+        date <- (map["date"], DateTransform())
+        
+        userID <- map["user_id"]
+    }
+    
+}
+
