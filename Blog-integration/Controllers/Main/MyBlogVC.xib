@@ -18,6 +18,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyBlogVC" customModule="Blog_integration" customModuleProvider="target">
             <connections>
+                <outlet property="emailLabel" destination="ZLy-qE-dyW" id="ZOh-Rl-pUY"/>
+                <outlet property="nameLabel" destination="JAv-GF-uoZ" id="qrg-Ip-E5h"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -82,6 +84,18 @@
                                     <real key="value" value="20"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="newPostTapped:" destination="-1" eventType="touchUpInside" id="fa3-Fp-HaK"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QI8-Rn-pqy">
+                            <rect key="frame" x="315" y="48" width="48" height="30"/>
+                            <state key="normal" title="Logout">
+                                <color key="titleColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="logoutTapped:" destination="-1" eventType="touchUpInside" id="t8c-ox-JKn"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -95,6 +109,8 @@
                         <constraint firstItem="lwE-gw-piw" firstAttribute="leading" secondItem="HHQ-cN-IKy" secondAttribute="leading" constant="30" id="SrM-ey-zgs"/>
                         <constraint firstItem="JAv-GF-uoZ" firstAttribute="leading" secondItem="lwE-gw-piw" secondAttribute="trailing" constant="32" id="c8A-g1-8bC"/>
                         <constraint firstAttribute="bottom" secondItem="6te-ty-nVO" secondAttribute="bottom" constant="8" id="jJp-qO-1Lc"/>
+                        <constraint firstItem="QI8-Rn-pqy" firstAttribute="centerY" secondItem="ZLy-qE-dyW" secondAttribute="centerY" id="stI-fX-tzP"/>
+                        <constraint firstAttribute="trailing" secondItem="QI8-Rn-pqy" secondAttribute="trailing" constant="12" id="tqN-eO-wUM"/>
                         <constraint firstItem="ZLy-qE-dyW" firstAttribute="leading" secondItem="lwE-gw-piw" secondAttribute="trailing" constant="32" id="z1g-G9-yDG"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
@@ -124,6 +140,7 @@
                 <constraint firstItem="So7-Bn-Omb" firstAttribute="top" secondItem="HHQ-cN-IKy" secondAttribute="bottom" id="zsw-cU-Ohb"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="32.5" y="87.5"/>
         </view>
     </objects>
     <resources>

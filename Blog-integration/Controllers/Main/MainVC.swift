@@ -28,9 +28,9 @@ class MainVC: BasicVC {
             vc.setNavigationBarHidden(true, animated: false)
         }
         
-        addChildViewController(topUsersVC)
-        container.addSubview(topUsersVC.view)
-        topUsersVC.view.frame = container.bounds
+        addChildViewController(myBlogVC)
+        container.addSubview(myBlogVC.view)
+        myBlogVC.view.frame = container.bounds
     }
     
     // MARK: - Actions

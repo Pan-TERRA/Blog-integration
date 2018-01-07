@@ -33,16 +33,6 @@ class AuthorizationManager: NSObject {
         
         try? FUIAuth.defaultAuthUI()?.signOut()
         
-        // Clear facebook cookies
-        let storage = HTTPCookieStorage.shared
-        for cook in storage.cookies! {
-            let domainName: NSString = cook.domain as NSString
-            let domainRange = domainName.range(of: "facebook")
-            if domainRange.length > 0 {
-                storage.deleteCookie(cook)
-            }
-        }
-        
         let vc = IntroVC()
         let navigationVC = UINavigationController(rootViewController: vc)
         navigationVC.setNavigationBarHidden(true, animated: false)
@@ -66,7 +56,7 @@ extension AuthorizationManager: FUIAuthDelegate {
             UIApplication.shared.keyWindow?.set(toRootViewController: navigationVC)
             
         } else {
-            print(error?.localizedDescription)
+            print(error?.localizedDescription ?? "")
         }
     }
     
