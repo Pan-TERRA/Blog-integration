@@ -45,9 +45,6 @@
 		412413CE20013DB7008B33BF /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412413CA20013DB7008B33BF /* APIManager.swift */; };
 		412413D320013EBC008B33BF /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412413D120013EBC008B33BF /* MainVC.swift */; };
 		412413D420013EBC008B33BF /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 412413D220013EBC008B33BF /* MainVC.xib */; };
-		412413DB20013F26008B33BF /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412413D720013F26008B33BF /* LoginForm.swift */; };
-		412413DC20013F26008B33BF /* ProfileForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412413D820013F26008B33BF /* ProfileForm.swift */; };
-		412413DD20013F26008B33BF /* RegistrationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412413D920013F26008B33BF /* RegistrationForm.swift */; };
 		412413DE20013F26008B33BF /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412413DA20013F26008B33BF /* ProfileModel.swift */; };
 		412413E120013FD6008B33BF /* UploadedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412413E020013FD5008B33BF /* UploadedImage.swift */; };
 		414F552220011AC900CA97AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414F552120011AC900CA97AE /* AppDelegate.swift */; };
@@ -62,6 +59,9 @@
 		41B0CF9F20024E26005EA5CB /* MyBlogVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41B0CF9D20024E26005EA5CB /* MyBlogVC.xib */; };
 		41B0CFA220024E38005EA5CB /* TopUsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0CFA020024E38005EA5CB /* TopUsersVC.swift */; };
 		41B0CFA320024E38005EA5CB /* TopUsersVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41B0CFA120024E38005EA5CB /* TopUsersVC.xib */; };
+		41B0CFA620027303005EA5CB /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0CFA520027303005EA5CB /* PostModel.swift */; };
+		41B0CFA920027427005EA5CB /* NewPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0CFA720027427005EA5CB /* NewPostVC.swift */; };
+		41B0CFAA20027427005EA5CB /* NewPostVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41B0CFA820027427005EA5CB /* NewPostVC.xib */; };
 		AF38D596ED57B42D831E3E6A /* Pods_Blog_integration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5A2462AF09E27A195D2429 /* Pods_Blog_integration.framework */; };
 /* End PBXBuildFile section */
 
@@ -115,9 +115,6 @@
 		412413CA20013DB7008B33BF /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		412413D120013EBC008B33BF /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		412413D220013EBC008B33BF /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
-		412413D720013F26008B33BF /* LoginForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
-		412413D820013F26008B33BF /* ProfileForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileForm.swift; sourceTree = "<group>"; };
-		412413D920013F26008B33BF /* RegistrationForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationForm.swift; sourceTree = "<group>"; };
 		412413DA20013F26008B33BF /* ProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		412413E020013FD5008B33BF /* UploadedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UploadedImage.swift; path = "Blog-integration/Models/UploadedImage.swift"; sourceTree = SOURCE_ROOT; };
 		414F551E20011AC900CA97AE /* Blog-integration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blog-integration.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +132,9 @@
 		41B0CF9D20024E26005EA5CB /* MyBlogVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyBlogVC.xib; sourceTree = "<group>"; };
 		41B0CFA020024E38005EA5CB /* TopUsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopUsersVC.swift; sourceTree = "<group>"; };
 		41B0CFA120024E38005EA5CB /* TopUsersVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopUsersVC.xib; sourceTree = "<group>"; };
+		41B0CFA520027303005EA5CB /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		41B0CFA720027427005EA5CB /* NewPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostVC.swift; sourceTree = "<group>"; };
+		41B0CFA820027427005EA5CB /* NewPostVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPostVC.xib; sourceTree = "<group>"; };
 		586315B8813D94FD1A520A3D /* Pods-Blog-integrationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blog-integrationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blog-integrationTests/Pods-Blog-integrationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		717639068FA513F60634A426 /* Pods_Blog_integrationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blog_integrationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A26F3CAC2DDFD825DC94BB2 /* Pods-Blog-integration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blog-integration.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blog-integration/Pods-Blog-integration.debug.xcconfig"; sourceTree = "<group>"; };
@@ -318,6 +318,8 @@
 				41B0CF9D20024E26005EA5CB /* MyBlogVC.xib */,
 				41B0CFA020024E38005EA5CB /* TopUsersVC.swift */,
 				41B0CFA120024E38005EA5CB /* TopUsersVC.xib */,
+				41B0CFA720027427005EA5CB /* NewPostVC.swift */,
+				41B0CFA820027427005EA5CB /* NewPostVC.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -326,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				412413E020013FD5008B33BF /* UploadedImage.swift */,
+				41B0CFA4200272EE005EA5CB /* Posts */,
 				412413DF20013F31008B33BF /* Profiles */,
 			);
 			path = Models;
@@ -334,10 +337,7 @@
 		412413DF20013F31008B33BF /* Profiles */ = {
 			isa = PBXGroup;
 			children = (
-				412413D720013F26008B33BF /* LoginForm.swift */,
-				412413D820013F26008B33BF /* ProfileForm.swift */,
 				412413DA20013F26008B33BF /* ProfileModel.swift */,
-				412413D920013F26008B33BF /* RegistrationForm.swift */,
 			);
 			path = Profiles;
 			sourceTree = "<group>";
@@ -385,6 +385,14 @@
 				414F553820011AC900CA97AE /* Info.plist */,
 			);
 			path = "Blog-integrationTests";
+			sourceTree = "<group>";
+		};
+		41B0CFA4200272EE005EA5CB /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				41B0CFA520027303005EA5CB /* PostModel.swift */,
+			);
+			path = Posts;
 			sourceTree = "<group>";
 		};
 		C2DEA0E3DE5BEFC5C63C0DF6 /* Pods */ = {
@@ -504,6 +512,7 @@
 				414F552920011AC900CA97AE /* Assets.xcassets in Resources */,
 				412413C620013D84008B33BF /* LoadMoreFooter.xib in Resources */,
 				4124136420013B64008B33BF /* IntroVC.xib in Resources */,
+				41B0CFAA20027427005EA5CB /* NewPostVC.xib in Resources */,
 				41B0CF9F20024E26005EA5CB /* MyBlogVC.xib in Resources */,
 				41B0CF9920024141005EA5CB /* GoogleService-Info.plist in Resources */,
 				414F552720011AC900CA97AE /* Main.storyboard in Resources */,
@@ -654,7 +663,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Blog-integrationTests/Pods-Blog-integrationTests-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle,
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -672,7 +681,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Blog-integration/Pods-Blog-integration-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle,
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -717,15 +726,14 @@
 				412413BD20013D84008B33BF /* DateTransform.swift in Sources */,
 				412413C020013D84008B33BF /* OverlayView.swift in Sources */,
 				412413CD20013DB7008B33BF /* Networking.swift in Sources */,
+				41B0CFA920027427005EA5CB /* NewPostVC.swift in Sources */,
 				412413B720013D84008B33BF /* UIWindow+Root.swift in Sources */,
 				412413B920013D84008B33BF /* UITextField+PlaceholderColor.swift in Sources */,
 				412413AF20013D84008B33BF /* UIView+Storyboard.swift in Sources */,
 				412413C520013D84008B33BF /* LoadMoreFooter.swift in Sources */,
+				41B0CFA620027303005EA5CB /* PostModel.swift in Sources */,
 				412413AE20013D84008B33BF /* NSObject+ClassName.swift in Sources */,
-				412413DC20013F26008B33BF /* ProfileForm.swift in Sources */,
 				4124136320013B64008B33BF /* IntroVC.swift in Sources */,
-				412413DD20013F26008B33BF /* RegistrationForm.swift in Sources */,
-				412413DB20013F26008B33BF /* LoginForm.swift in Sources */,
 				412413CE20013DB7008B33BF /* APIManager.swift in Sources */,
 				412413AC20013D84008B33BF /* AuthorizationManager.swift in Sources */,
 				4124135C20013B64008B33BF /* ModalVC.swift in Sources */,
