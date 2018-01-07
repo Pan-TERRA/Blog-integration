@@ -61,6 +61,8 @@
 		414F552C20011AC900CA97AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 414F552A20011AC900CA97AE /* LaunchScreen.storyboard */; };
 		414F553720011AC900CA97AE /* Blog_integrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414F553620011AC900CA97AE /* Blog_integrationTests.swift */; };
 		41B0CF97200233CE005EA5CB /* GitTag.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41B0CF96200233CE005EA5CB /* GitTag.plist */; };
+		41B0CF9920024141005EA5CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41B0CF9820024141005EA5CB /* GoogleService-Info.plist */; };
+		41B0CF9A20024141005EA5CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41B0CF9820024141005EA5CB /* GoogleService-Info.plist */; };
 		AF38D596ED57B42D831E3E6A /* Pods_Blog_integration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5A2462AF09E27A195D2429 /* Pods_Blog_integration.framework */; };
 /* End PBXBuildFile section */
 
@@ -134,6 +136,7 @@
 		414F553620011AC900CA97AE /* Blog_integrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blog_integrationTests.swift; sourceTree = "<group>"; };
 		414F553820011AC900CA97AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41B0CF96200233CE005EA5CB /* GitTag.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GitTag.plist; sourceTree = "<group>"; };
+		41B0CF9820024141005EA5CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		586315B8813D94FD1A520A3D /* Pods-Blog-integrationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blog-integrationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blog-integrationTests/Pods-Blog-integrationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		717639068FA513F60634A426 /* Pods_Blog_integrationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blog_integrationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A26F3CAC2DDFD825DC94BB2 /* Pods-Blog-integration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blog-integration.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blog-integration/Pods-Blog-integration.debug.xcconfig"; sourceTree = "<group>"; };
@@ -365,6 +368,7 @@
 		414F552020011AC900CA97AE /* Blog-integration */ = {
 			isa = PBXGroup;
 			children = (
+				41B0CF9820024141005EA5CB /* GoogleService-Info.plist */,
 				414F552D20011AC900CA97AE /* Info.plist */,
 				41B0CF96200233CE005EA5CB /* GitTag.plist */,
 				412413D520013ECE008B33BF /* Models */,
@@ -504,6 +508,7 @@
 				414F552920011AC900CA97AE /* Assets.xcassets in Resources */,
 				412413C620013D84008B33BF /* LoadMoreFooter.xib in Resources */,
 				4124136420013B64008B33BF /* IntroVC.xib in Resources */,
+				41B0CF9920024141005EA5CB /* GoogleService-Info.plist in Resources */,
 				414F552720011AC900CA97AE /* Main.storyboard in Resources */,
 				412413BE20013D84008B33BF /* LoadingView.xib in Resources */,
 			);
@@ -513,6 +518,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41B0CF9A20024141005EA5CB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,20 +535,24 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/KMPlaceholderTextView/KMPlaceholderTextView.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KMPlaceholderTextView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -595,20 +605,24 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/KMPlaceholderTextView/KMPlaceholderTextView.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KMPlaceholderTextView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
