@@ -12,6 +12,12 @@ class IntroVC: BasicVC {
     
     // MARK: - Outlets
     
+    @IBOutlet weak var gitDescribe: UILabel! {
+        didSet {
+            gitDescribe.text = getGitTag()
+        }
+    }
+    
     // MARK: - Properties
     
     // MARK: - Lifecycle

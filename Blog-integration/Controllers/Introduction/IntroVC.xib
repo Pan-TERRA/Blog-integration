@@ -18,6 +18,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IntroVC" customModule="Blog_integration" customModuleProvider="target">
             <connections>
+                <outlet property="gitDescribe" destination="58S-4u-Cvy" id="0ud-wl-JFm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -63,6 +64,21 @@
                         <constraint firstAttribute="width" secondItem="0mF-sg-gem" secondAttribute="height" multiplier="2048:1152" id="zhw-uA-cPl"/>
                     </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result of git describe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MP2-yT-3Qs">
+                    <rect key="frame" x="106.5" y="323" width="162" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58S-4u-Cvy">
+                    <rect key="frame" x="187.5" y="352" width="0.0" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="hNE-lm-Sxd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -72,6 +88,10 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="j0Z-LX-ZGt" secondAttribute="bottom" constant="32" id="O0R-a0-WWl"/>
                 <constraint firstItem="0mF-sg-gem" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ttk-RG-Ua3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="j0Z-LX-ZGt" secondAttribute="trailing" constant="35" id="UVK-Al-aC3"/>
+                <constraint firstItem="MP2-yT-3Qs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Y6n-HC-zWG"/>
+                <constraint firstItem="MP2-yT-3Qs" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="aHb-lB-dc2"/>
+                <constraint firstItem="58S-4u-Cvy" firstAttribute="top" secondItem="MP2-yT-3Qs" secondAttribute="bottom" constant="8" id="q7N-xg-Y4O"/>
+                <constraint firstItem="58S-4u-Cvy" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vwk-1U-Ber"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="53" y="51"/>
