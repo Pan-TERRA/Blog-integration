@@ -1,5 +1,5 @@
 //
-//  SponsorhusetError.swift
+//  BlogError.swift
 //  Sponsorhuset
 //
 //  Created by Vlad Krut on 04.10.2017.
@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-class SponsorhusetError: Error {
+class BlogError: Error {
     
     let error: Error
     let readableData: String?

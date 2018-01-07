@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuthUI
 
 class IntroVC: BasicVC {
     
@@ -31,8 +32,7 @@ class IntroVC: BasicVC {
     // MARK: - Actions
     
     @IBAction func nextTapped(_ sender: UIButton) {
-        let login = LoginVC()
         
-        navigationController?.pushViewController(login, animated: true)
+        AuthorizationManager.shared.login(on: self)
     }
 }

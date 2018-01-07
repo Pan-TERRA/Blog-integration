@@ -10,7 +10,10 @@ pod 'AlamofireImage'
 pod 'SwiftyJSON'
 pod 'IQKeyboardManagerSwift'
 pod 'KMPlaceholderTextView'
+
 pod 'Firebase/Core'
+pod 'FirebaseUI/Auth'
+pod 'FirebaseUI/Google'
 
 end
 
@@ -23,7 +26,9 @@ pod 'AlamofireImage'
 pod 'SwiftyJSON'
 pod 'IQKeyboardManagerSwift'
 pod 'KMPlaceholderTextView'
+
 pod 'Firebase/Core'
+pod 'FirebaseUI/Auth'
 
 end
 

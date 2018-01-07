@@ -26,6 +26,15 @@ class BasicVC: UIViewController, EventHandler {
         NotificationCenter.default.removeObserver(self)
     }
     
+    // MARK: - Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.backgroundColor = UIColor(colorWithHexValue: 0xF5F5F5)
+    }
+
+    
     // MARK: - Navigation
     
     func backDidTap() {

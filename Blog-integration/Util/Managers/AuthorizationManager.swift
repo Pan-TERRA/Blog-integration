@@ -7,78 +7,31 @@
 //
 
 import Foundation
-import SwiftyJSON
+import FirebaseAuthUI
 
-enum AuthorizationType: String {
-    case facebook = "login/check-facebook"
-//    case google = "login/check-google"
-}
-
-class AuthorizationManager {
+class AuthorizationManager: NSObject {
     
-    static let shared = AuthorizationManager()
-
-    /// Now unused. Only for authorization without FB SDK
-//    func loginWithSocials(type: AuthorizationType, code: String, completionHandler: @escaping (SponsorhusetError?)->()) {
-//
-//        APIManager().loginWithSocials(type: type, code: code, success: { (response) in
-//            self.parseTokensWithResponse(response)
-//            self.getCurrentUserProfile(completionHandler: completionHandler)
-//
-//        }) { (error) in
-//            DispatchQueue.main.async {
-//                completionHandler(error)
-//            }
-//        }
-//    }
+    static let shared: AuthorizationManager = {
+        let manager = AuthorizationManager()
+        
+        FUIAuth.defaultAuthUI()?.delegate = manager
+        
+        return manager
+    }()
     
-    func loginManually(email: String, password: String, completionHandler: @escaping (SponsorhusetError?)->()) {
-        
-        let form = LoginForm()
-        form.email = email
-        form.password = password
-        
-        APIManager().login(form: form, success: { response in
-            self.saveCurrentUserProfile(response: response)
-            DispatchQueue.main.async {
-                completionHandler(nil)
-            }
-        }, failure: { error in
-            DispatchQueue.main.async {
-                completionHandler(error)
-            }
-        })
-
+    var userProfile: User?
+    
+    func login(on vc: BasicVC) {
+        vc.present(FUIAuth.defaultAuthUI()!.authViewController(), animated: true, completion: nil)
     }
-    
-//    func register(form: RegistrationForm, completionHandler: @escaping (Error?, Int?)->()) {
-//
-//        APIManager().registerUser(data: form, success: { (response) in
-//            print(response)
-//            completionHandler(nil, nil)
-//
-//        }) { (error, code) in
-//            DispatchQueue.main.async {
-//                completionHandler(error, code)
-//            }
-//        }
-//    }
-    
-    
-    func saveCurrentUserProfile(response: Any) {
-        
-        if let currentUser = ProfileModel(JSONString: JSONString(data: response)) {
-            APIModels.shared.userProfile = currentUser
-            
-            UserDefaultsManager.default.writeValue(currentUser.userID, forKey: .kUserID)
-        }
-    }
-    
+
     func logout() {
         
         UserDefaultsManager.default.clearAllDefaults()
         
-        APIModels.shared.userProfile = nil
+        userProfile = nil
+        
+        try? FUIAuth.defaultAuthUI()?.signOut()
         
         // Clear facebook cookies
         let storage = HTTPCookieStorage.shared
@@ -97,3 +50,27 @@ class AuthorizationManager {
         UIApplication.shared.keyWindow?.set(toRootViewController: navigationVC)
     }
 }
+
+extension AuthorizationManager: FUIAuthDelegate {
+    
+    func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
+        
+        if user != nil {
+            
+            userProfile = user
+            
+            let vc = MainVC()
+            let navigationVC = UINavigationController(rootViewController: vc)
+            navigationVC.setNavigationBarHidden(true, animated: false)
+            
+            UIApplication.shared.keyWindow?.set(toRootViewController: navigationVC)
+            
+        } else {
+            print(error?.localizedDescription)
+        }
+    }
+    
+    
+}
+
+

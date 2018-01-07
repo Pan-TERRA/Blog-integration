@@ -9,6 +9,7 @@
 import UIKit
 import IQKeyboardManagerSwift
 import Firebase
+import FirebaseAuthUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,8 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        FirebaseApp.configure()
-        
+        setFirebase()
         setKeyboardManager()
         
         let vc = IntroVC()
@@ -33,11 +33,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func setKeyboardManager() {
+    private func setKeyboardManager() {
         IQKeyboardManager.sharedManager().enable = true
         IQKeyboardManager.sharedManager().enableAutoToolbar = true
     }
-
+    
+    private func setFirebase() {
+        
+        FirebaseApp.configure()
+    }
 
 }
-

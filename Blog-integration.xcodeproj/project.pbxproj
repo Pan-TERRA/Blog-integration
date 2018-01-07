@@ -13,12 +13,8 @@
 		4124135A20013B64008B33BF /* BasicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124134420013B64008B33BF /* BasicVC.swift */; };
 		4124135B20013B64008B33BF /* EventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124134620013B64008B33BF /* EventHandler.swift */; };
 		4124135C20013B64008B33BF /* ModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124134720013B64008B33BF /* ModalVC.swift */; };
-		4124136220013B64008B33BF /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124134E20013B64008B33BF /* RegisterVC.swift */; };
 		4124136320013B64008B33BF /* IntroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124135020013B64008B33BF /* IntroVC.swift */; };
 		4124136420013B64008B33BF /* IntroVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4124135120013B64008B33BF /* IntroVC.xib */; };
-		4124136520013B64008B33BF /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124135220013B64008B33BF /* LoginVC.swift */; };
-		4124136920013B64008B33BF /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4124135620013B64008B33BF /* RegisterVC.xib */; };
-		4124136B20013B64008B33BF /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4124135820013B64008B33BF /* LoginVC.xib */; };
 		412413A520013D84008B33BF /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124137620013D84008B33BF /* PlaceholderTextView.swift */; };
 		412413A720013D84008B33BF /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124137820013D84008B33BF /* Checkbox.swift */; };
 		412413A920013D84008B33BF /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124137B20013D84008B33BF /* UserDefaultsManager.swift */; };
@@ -44,10 +40,9 @@
 		412413C520013D84008B33BF /* LoadMoreFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124139D20013D84008B33BF /* LoadMoreFooter.swift */; };
 		412413C620013D84008B33BF /* LoadMoreFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4124139E20013D84008B33BF /* LoadMoreFooter.xib */; };
 		412413C720013D84008B33BF /* ViewFromXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124139F20013D84008B33BF /* ViewFromXib.swift */; };
-		412413CC20013DB7008B33BF /* SponsorhusetError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412413C820013DB6008B33BF /* SponsorhusetError.swift */; };
+		412413CC20013DB7008B33BF /* BlogError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412413C820013DB6008B33BF /* BlogError.swift */; };
 		412413CD20013DB7008B33BF /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412413C920013DB7008B33BF /* Networking.swift */; };
 		412413CE20013DB7008B33BF /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412413CA20013DB7008B33BF /* APIManager.swift */; };
-		412413CF20013DB7008B33BF /* APIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412413CB20013DB7008B33BF /* APIModels.swift */; };
 		412413D320013EBC008B33BF /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412413D120013EBC008B33BF /* MainVC.swift */; };
 		412413D420013EBC008B33BF /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 412413D220013EBC008B33BF /* MainVC.xib */; };
 		412413DB20013F26008B33BF /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412413D720013F26008B33BF /* LoginForm.swift */; };
@@ -63,6 +58,10 @@
 		41B0CF97200233CE005EA5CB /* GitTag.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41B0CF96200233CE005EA5CB /* GitTag.plist */; };
 		41B0CF9920024141005EA5CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41B0CF9820024141005EA5CB /* GoogleService-Info.plist */; };
 		41B0CF9A20024141005EA5CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41B0CF9820024141005EA5CB /* GoogleService-Info.plist */; };
+		41B0CF9E20024E26005EA5CB /* MyBlogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0CF9C20024E26005EA5CB /* MyBlogVC.swift */; };
+		41B0CF9F20024E26005EA5CB /* MyBlogVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41B0CF9D20024E26005EA5CB /* MyBlogVC.xib */; };
+		41B0CFA220024E38005EA5CB /* TopUsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0CFA020024E38005EA5CB /* TopUsersVC.swift */; };
+		41B0CFA320024E38005EA5CB /* TopUsersVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41B0CFA120024E38005EA5CB /* TopUsersVC.xib */; };
 		AF38D596ED57B42D831E3E6A /* Pods_Blog_integration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5A2462AF09E27A195D2429 /* Pods_Blog_integration.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,12 +83,8 @@
 		4124134420013B64008B33BF /* BasicVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicVC.swift; sourceTree = "<group>"; };
 		4124134620013B64008B33BF /* EventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventHandler.swift; sourceTree = "<group>"; };
 		4124134720013B64008B33BF /* ModalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalVC.swift; sourceTree = "<group>"; };
-		4124134E20013B64008B33BF /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		4124135020013B64008B33BF /* IntroVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroVC.swift; sourceTree = "<group>"; };
 		4124135120013B64008B33BF /* IntroVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroVC.xib; sourceTree = "<group>"; };
-		4124135220013B64008B33BF /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		4124135620013B64008B33BF /* RegisterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
-		4124135820013B64008B33BF /* LoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		4124137620013D84008B33BF /* PlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTextView.swift; sourceTree = "<group>"; };
 		4124137820013D84008B33BF /* Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		4124137B20013D84008B33BF /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
@@ -115,10 +110,9 @@
 		4124139D20013D84008B33BF /* LoadMoreFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadMoreFooter.swift; sourceTree = "<group>"; };
 		4124139E20013D84008B33BF /* LoadMoreFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadMoreFooter.xib; sourceTree = "<group>"; };
 		4124139F20013D84008B33BF /* ViewFromXib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewFromXib.swift; sourceTree = "<group>"; };
-		412413C820013DB6008B33BF /* SponsorhusetError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorhusetError.swift; sourceTree = "<group>"; };
+		412413C820013DB6008B33BF /* BlogError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogError.swift; sourceTree = "<group>"; };
 		412413C920013DB7008B33BF /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		412413CA20013DB7008B33BF /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		412413CB20013DB7008B33BF /* APIModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIModels.swift; sourceTree = "<group>"; };
 		412413D120013EBC008B33BF /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		412413D220013EBC008B33BF /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
 		412413D720013F26008B33BF /* LoginForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
@@ -137,6 +131,10 @@
 		414F553820011AC900CA97AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41B0CF96200233CE005EA5CB /* GitTag.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GitTag.plist; sourceTree = "<group>"; };
 		41B0CF9820024141005EA5CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		41B0CF9C20024E26005EA5CB /* MyBlogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBlogVC.swift; sourceTree = "<group>"; };
+		41B0CF9D20024E26005EA5CB /* MyBlogVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyBlogVC.xib; sourceTree = "<group>"; };
+		41B0CFA020024E38005EA5CB /* TopUsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopUsersVC.swift; sourceTree = "<group>"; };
+		41B0CFA120024E38005EA5CB /* TopUsersVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopUsersVC.xib; sourceTree = "<group>"; };
 		586315B8813D94FD1A520A3D /* Pods-Blog-integrationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blog-integrationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blog-integrationTests/Pods-Blog-integrationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		717639068FA513F60634A426 /* Pods_Blog_integrationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blog_integrationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A26F3CAC2DDFD825DC94BB2 /* Pods-Blog-integration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blog-integration.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blog-integration/Pods-Blog-integration.debug.xcconfig"; sourceTree = "<group>"; };
@@ -167,9 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				412413CA20013DB7008B33BF /* APIManager.swift */,
-				412413CB20013DB7008B33BF /* APIModels.swift */,
 				412413C920013DB7008B33BF /* Networking.swift */,
-				412413C820013DB6008B33BF /* SponsorhusetError.swift */,
+				412413C820013DB6008B33BF /* BlogError.swift */,
 			);
 			path = Server;
 			sourceTree = "<group>";
@@ -231,10 +228,6 @@
 			children = (
 				4124135020013B64008B33BF /* IntroVC.swift */,
 				4124135120013B64008B33BF /* IntroVC.xib */,
-				4124135220013B64008B33BF /* LoginVC.swift */,
-				4124135820013B64008B33BF /* LoginVC.xib */,
-				4124134E20013B64008B33BF /* RegisterVC.swift */,
-				4124135620013B64008B33BF /* RegisterVC.xib */,
 			);
 			path = Introduction;
 			sourceTree = "<group>";
@@ -321,6 +314,10 @@
 			children = (
 				412413D120013EBC008B33BF /* MainVC.swift */,
 				412413D220013EBC008B33BF /* MainVC.xib */,
+				41B0CF9C20024E26005EA5CB /* MyBlogVC.swift */,
+				41B0CF9D20024E26005EA5CB /* MyBlogVC.xib */,
+				41B0CFA020024E38005EA5CB /* TopUsersVC.swift */,
+				41B0CFA120024E38005EA5CB /* TopUsersVC.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -500,14 +497,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41B0CFA320024E38005EA5CB /* TopUsersVC.xib in Resources */,
 				412413D420013EBC008B33BF /* MainVC.xib in Resources */,
-				4124136B20013B64008B33BF /* LoginVC.xib in Resources */,
 				414F552C20011AC900CA97AE /* LaunchScreen.storyboard in Resources */,
-				4124136920013B64008B33BF /* RegisterVC.xib in Resources */,
 				41B0CF97200233CE005EA5CB /* GitTag.plist in Resources */,
 				414F552920011AC900CA97AE /* Assets.xcassets in Resources */,
 				412413C620013D84008B33BF /* LoadMoreFooter.xib in Resources */,
 				4124136420013B64008B33BF /* IntroVC.xib in Resources */,
+				41B0CF9F20024E26005EA5CB /* MyBlogVC.xib in Resources */,
 				41B0CF9920024141005EA5CB /* GoogleService-Info.plist in Resources */,
 				414F552720011AC900CA97AE /* Main.storyboard in Resources */,
 				412413BE20013D84008B33BF /* LoadingView.xib in Resources */,
@@ -535,6 +532,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher-Core/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/KMPlaceholderTextView/KMPlaceholderTextView.framework",
@@ -547,6 +545,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KMPlaceholderTextView.framework",
@@ -605,6 +604,8 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher.default-Core/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/KMPlaceholderTextView/KMPlaceholderTextView.framework",
@@ -617,6 +618,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KMPlaceholderTextView.framework",
@@ -649,8 +652,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Blog-integrationTests/Pods-Blog-integrationTests-resources.sh",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
-				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+				"$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI-Auth/FirebaseAuthUI.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -668,8 +670,9 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Blog-integration/Pods-Blog-integration-resources.sh",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
-				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+				"$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI-Auth-Google/FirebaseAuthUI.bundle",
+				"$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI-Auth-Google/FirebaseGoogleAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -688,11 +691,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				412413B320013D84008B33BF /* String+Size.swift in Sources */,
-				4124136520013B64008B33BF /* LoginVC.swift in Sources */,
-				412413CC20013DB7008B33BF /* SponsorhusetError.swift in Sources */,
+				412413CC20013DB7008B33BF /* BlogError.swift in Sources */,
 				4124135920013B64008B33BF /* MappableTableVC.swift in Sources */,
-				412413CF20013DB7008B33BF /* APIModels.swift in Sources */,
 				412413DE20013F26008B33BF /* ProfileModel.swift in Sources */,
+				41B0CFA220024E38005EA5CB /* TopUsersVC.swift in Sources */,
 				412413B420013D84008B33BF /* UIViewController+Keyboard.swift in Sources */,
 				412413BF20013D84008B33BF /* LoadingView.swift in Sources */,
 				412413B620013D84008B33BF /* Data+String.swift in Sources */,
@@ -701,6 +703,7 @@
 				412413B820013D84008B33BF /* NSLayoutConstraint+Multiplier.swift in Sources */,
 				412413A720013D84008B33BF /* Checkbox.swift in Sources */,
 				412413BB20013D84008B33BF /* UIView+Shadow.swift in Sources */,
+				41B0CF9E20024E26005EA5CB /* MyBlogVC.swift in Sources */,
 				412413BC20013D84008B33BF /* UIViewController+PreviousVC.swift in Sources */,
 				412413B020013D84008B33BF /* UIView+getVC.swift in Sources */,
 				414F552220011AC900CA97AE /* AppDelegate.swift in Sources */,
@@ -725,7 +728,6 @@
 				412413DB20013F26008B33BF /* LoginForm.swift in Sources */,
 				412413CE20013DB7008B33BF /* APIManager.swift in Sources */,
 				412413AC20013D84008B33BF /* AuthorizationManager.swift in Sources */,
-				4124136220013B64008B33BF /* RegisterVC.swift in Sources */,
 				4124135C20013B64008B33BF /* ModalVC.swift in Sources */,
 				4124135B20013B64008B33BF /* EventHandler.swift in Sources */,
 				412413B220013D84008B33BF /* UITableView+Nib.swift in Sources */,

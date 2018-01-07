@@ -11,14 +11,14 @@ import Alamofire
 
 class Networking {
     
-    func makeRequest(path: String, method: HTTPMethod, parameters: Parameters?, headers: HTTPHeaders?, success: @escaping (Any) -> (), failure: @escaping (SponsorhusetError) -> ()) {
+    func makeRequest(path: String, method: HTTPMethod, parameters: Parameters?, headers: HTTPHeaders?, success: @escaping (Any) -> (), failure: @escaping (BlogError) -> ()) {
         
         let fullPath = MainAPIUrl + path
         
         makeRequestToFullPath(path: fullPath, method: method, parameters: parameters, headers: headers, success: success, failure: failure)
     }
     
-    func makeRequestToFullPath(path: String, method: HTTPMethod, parameters: Parameters?, headers: HTTPHeaders?, success: @escaping (Any) -> (), failure: @escaping (SponsorhusetError) -> ()) {
+    func makeRequestToFullPath(path: String, method: HTTPMethod, parameters: Parameters?, headers: HTTPHeaders?, success: @escaping (Any) -> (), failure: @escaping (BlogError) -> ()) {
         
         var encoding: ParameterEncoding = URLEncoding.default
         if method != .get { encoding = JSONEncoding.default }
@@ -67,10 +67,10 @@ class Networking {
                     print("\nREADABLE DATA:\n\(readableData ?? "nil")")
                 }
                 
-                let sponsorhusetError = SponsorhusetError(error: error, readableData: readableData, statusCode: response.response?.statusCode)
+                let blogError = BlogError(error: error, readableData: readableData, statusCode: response.response?.statusCode)
                 
                 DispatchQueue.main.async {
-                    failure(sponsorhusetError)
+                    failure(blogError)
                 }
             }
         }
