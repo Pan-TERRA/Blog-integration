@@ -8,6 +8,8 @@
 
 import Foundation
 
+let MainAPIUrl = ""
+
 func printCurrentTag() {
     print("Runtime. Git tag: \(getGitTag() ?? "null")")
 }

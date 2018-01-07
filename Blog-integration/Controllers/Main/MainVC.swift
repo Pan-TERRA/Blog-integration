@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainVC.swift
 //  Blog-integration
 //
 //  Created by Vlad Krut on 06.01.2018.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainVC: BasicVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        printCurrentTag()
-        
-    }
 
+        // Do any additional setup after loading the view.
+    }
+    
 }

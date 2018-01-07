@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +17,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        setKeyboardManager()
+        
+        let vc = IntroVC()
+        
+        let navigationVC = UINavigationController(rootViewController: vc)
+        navigationVC.setNavigationBarHidden(true, animated: false)
+        
+        window?.rootViewController = navigationVC
+        window?.makeKeyAndVisible()
+        
         return true
+    }
+    
+    func setKeyboardManager() {
+        IQKeyboardManager.sharedManager().enable = true
+        IQKeyboardManager.sharedManager().enableAutoToolbar = true
     }
 
 
