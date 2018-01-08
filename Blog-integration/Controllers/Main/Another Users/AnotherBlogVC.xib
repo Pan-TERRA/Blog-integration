@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnotherBlogVC" customModule="Blog_integration" customModuleProvider="target">
+            <connections>
+                <outlet property="nameLabel" destination="Doa-9W-qb7" id="fHk-ps-lp5"/>
+                <outlet property="tableView" destination="p7B-O0-abS" id="8vo-1t-cnz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p7B-O0-abS">
+                    <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="fBe-wX-TLj"/>
+                        <outlet property="delegate" destination="-1" id="dmA-od-iia"/>
+                        <outlet property="emptyDataSetSource" destination="-1" id="WAc-cS-mAw"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CwB-rk-IXr">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name and Surname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Doa-9W-qb7">
+                            <rect key="frame" x="120.5" y="32" width="134.5" height="17"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFK-F4-0LV">
+                            <rect key="frame" x="16" y="32" width="48" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="  Back" image="back-white">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="expandedTouchArea">
+                                    <real key="value" value="25"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="backTapped:" destination="-1" eventType="touchUpInside" id="Ggy-AN-kUs"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1333333333" green="0.42352941179999998" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Doa-9W-qb7" firstAttribute="centerY" secondItem="sFK-F4-0LV" secondAttribute="centerY" id="5bu-Eu-5Rq"/>
+                        <constraint firstAttribute="height" constant="60" id="W0Z-4o-tGU"/>
+                        <constraint firstItem="sFK-F4-0LV" firstAttribute="top" secondItem="CwB-rk-IXr" secondAttribute="top" constant="32" id="hS9-rv-kSK"/>
+                        <constraint firstItem="sFK-F4-0LV" firstAttribute="leading" secondItem="CwB-rk-IXr" secondAttribute="leading" constant="16" id="oz5-yl-E6A"/>
+                        <constraint firstItem="Doa-9W-qb7" firstAttribute="centerX" secondItem="CwB-rk-IXr" secondAttribute="centerX" id="pvd-Ne-npl"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                            <size key="value" width="0.0" height="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="p7B-O0-abS" firstAttribute="top" secondItem="CwB-rk-IXr" secondAttribute="bottom" id="51z-Zg-b2B"/>
+                <constraint firstItem="p7B-O0-abS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="EI5-3c-4zm"/>
+                <constraint firstItem="p7B-O0-abS" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Mi4-Ys-ASa"/>
+                <constraint firstItem="CwB-rk-IXr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XVh-cW-xOr"/>
+                <constraint firstItem="CwB-rk-IXr" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Yst-R4-7d1"/>
+                <constraint firstItem="p7B-O0-abS" firstAttribute="top" secondItem="CwB-rk-IXr" secondAttribute="bottom" id="qCQ-zq-3gX"/>
+                <constraint firstItem="CwB-rk-IXr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="tKo-XX-0wY"/>
+                <constraint firstItem="p7B-O0-abS" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="vB6-O8-bTf"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back-white" width="8" height="12"/>
+    </resources>
+</document>

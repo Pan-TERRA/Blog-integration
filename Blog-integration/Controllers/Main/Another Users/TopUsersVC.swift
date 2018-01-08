@@ -62,5 +62,14 @@ class TopUsersVC: MappableTableVC {
         })
     }
 
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        super.tableView(tableView, didSelectRowAt: indexPath)
+        
+        guard let user = mappables[indexPath.section] as? ProfileModel else { return }
+        
+        let vc = AnotherBlogVC()
+        vc.user = user
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

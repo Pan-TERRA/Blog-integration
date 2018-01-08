@@ -62,6 +62,11 @@
 		41B0CFA620027303005EA5CB /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0CFA520027303005EA5CB /* PostModel.swift */; };
 		41B0CFA920027427005EA5CB /* NewPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0CFA720027427005EA5CB /* NewPostVC.swift */; };
 		41B0CFAA20027427005EA5CB /* NewPostVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41B0CFA820027427005EA5CB /* NewPostVC.xib */; };
+		41B0CFAE20028AF8005EA5CB /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0CFAC20028AF8005EA5CB /* PostCell.swift */; };
+		41B0CFAF20028AF8005EA5CB /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41B0CFAD20028AF8005EA5CB /* PostCell.xib */; };
+		41B0CFB120028F6D005EA5CB /* Date+Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0CFB020028F6D005EA5CB /* Date+Calendar.swift */; };
+		41B0CFB620029809005EA5CB /* AnotherBlogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0CFB420029809005EA5CB /* AnotherBlogVC.swift */; };
+		41B0CFB720029809005EA5CB /* AnotherBlogVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41B0CFB520029809005EA5CB /* AnotherBlogVC.xib */; };
 		AF38D596ED57B42D831E3E6A /* Pods_Blog_integration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5A2462AF09E27A195D2429 /* Pods_Blog_integration.framework */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +140,11 @@
 		41B0CFA520027303005EA5CB /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		41B0CFA720027427005EA5CB /* NewPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostVC.swift; sourceTree = "<group>"; };
 		41B0CFA820027427005EA5CB /* NewPostVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPostVC.xib; sourceTree = "<group>"; };
+		41B0CFAC20028AF8005EA5CB /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		41B0CFAD20028AF8005EA5CB /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		41B0CFB020028F6D005EA5CB /* Date+Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Calendar.swift"; sourceTree = "<group>"; };
+		41B0CFB420029809005EA5CB /* AnotherBlogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherBlogVC.swift; sourceTree = "<group>"; };
+		41B0CFB520029809005EA5CB /* AnotherBlogVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnotherBlogVC.xib; sourceTree = "<group>"; };
 		586315B8813D94FD1A520A3D /* Pods-Blog-integrationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blog-integrationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blog-integrationTests/Pods-Blog-integrationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		717639068FA513F60634A426 /* Pods_Blog_integrationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blog_integrationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A26F3CAC2DDFD825DC94BB2 /* Pods-Blog-integration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blog-integration.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blog-integration/Pods-Blog-integration.debug.xcconfig"; sourceTree = "<group>"; };
@@ -267,6 +277,7 @@
 				4124138D20013D84008B33BF /* UIButton+TouchInsets.swift */,
 				4124138E20013D84008B33BF /* UIView+Shadow.swift */,
 				4124138F20013D84008B33BF /* UIViewController+PreviousVC.swift */,
+				41B0CFB020028F6D005EA5CB /* Date+Calendar.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -314,12 +325,9 @@
 			children = (
 				412413D120013EBC008B33BF /* MainVC.swift */,
 				412413D220013EBC008B33BF /* MainVC.xib */,
-				41B0CF9C20024E26005EA5CB /* MyBlogVC.swift */,
-				41B0CF9D20024E26005EA5CB /* MyBlogVC.xib */,
-				41B0CFA020024E38005EA5CB /* TopUsersVC.swift */,
-				41B0CFA120024E38005EA5CB /* TopUsersVC.xib */,
-				41B0CFA720027427005EA5CB /* NewPostVC.swift */,
-				41B0CFA820027427005EA5CB /* NewPostVC.xib */,
+				41B0CFAB20028ABE005EA5CB /* My Blog */,
+				41B0CFB3200297E5005EA5CB /* Another Users */,
+				41B0CFB2200297DC005EA5CB /* Cells */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -393,6 +401,37 @@
 				41B0CFA520027303005EA5CB /* PostModel.swift */,
 			);
 			path = Posts;
+			sourceTree = "<group>";
+		};
+		41B0CFAB20028ABE005EA5CB /* My Blog */ = {
+			isa = PBXGroup;
+			children = (
+				41B0CF9C20024E26005EA5CB /* MyBlogVC.swift */,
+				41B0CF9D20024E26005EA5CB /* MyBlogVC.xib */,
+				41B0CFA720027427005EA5CB /* NewPostVC.swift */,
+				41B0CFA820027427005EA5CB /* NewPostVC.xib */,
+			);
+			path = "My Blog";
+			sourceTree = "<group>";
+		};
+		41B0CFB2200297DC005EA5CB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				41B0CFAC20028AF8005EA5CB /* PostCell.swift */,
+				41B0CFAD20028AF8005EA5CB /* PostCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		41B0CFB3200297E5005EA5CB /* Another Users */ = {
+			isa = PBXGroup;
+			children = (
+				41B0CFA020024E38005EA5CB /* TopUsersVC.swift */,
+				41B0CFA120024E38005EA5CB /* TopUsersVC.xib */,
+				41B0CFB420029809005EA5CB /* AnotherBlogVC.swift */,
+				41B0CFB520029809005EA5CB /* AnotherBlogVC.xib */,
+			);
+			path = "Another Users";
 			sourceTree = "<group>";
 		};
 		C2DEA0E3DE5BEFC5C63C0DF6 /* Pods */ = {
@@ -507,11 +546,13 @@
 			files = (
 				41B0CFA320024E38005EA5CB /* TopUsersVC.xib in Resources */,
 				412413D420013EBC008B33BF /* MainVC.xib in Resources */,
+				41B0CFAF20028AF8005EA5CB /* PostCell.xib in Resources */,
 				414F552C20011AC900CA97AE /* LaunchScreen.storyboard in Resources */,
 				41B0CF97200233CE005EA5CB /* GitTag.plist in Resources */,
 				414F552920011AC900CA97AE /* Assets.xcassets in Resources */,
 				412413C620013D84008B33BF /* LoadMoreFooter.xib in Resources */,
 				4124136420013B64008B33BF /* IntroVC.xib in Resources */,
+				41B0CFB720029809005EA5CB /* AnotherBlogVC.xib in Resources */,
 				41B0CFAA20027427005EA5CB /* NewPostVC.xib in Resources */,
 				41B0CF9F20024E26005EA5CB /* MyBlogVC.xib in Resources */,
 				41B0CF9920024141005EA5CB /* GoogleService-Info.plist in Resources */,
@@ -541,6 +582,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
@@ -555,6 +597,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
@@ -615,6 +658,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
@@ -629,6 +673,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
@@ -716,7 +761,10 @@
 				412413BC20013D84008B33BF /* UIViewController+PreviousVC.swift in Sources */,
 				412413B020013D84008B33BF /* UIView+getVC.swift in Sources */,
 				414F552220011AC900CA97AE /* AppDelegate.swift in Sources */,
+				41B0CFB620029809005EA5CB /* AnotherBlogVC.swift in Sources */,
+				41B0CFAE20028AF8005EA5CB /* PostCell.swift in Sources */,
 				412413E120013FD6008B33BF /* UploadedImage.swift in Sources */,
+				41B0CFB120028F6D005EA5CB /* Date+Calendar.swift in Sources */,
 				412413A920013D84008B33BF /* UserDefaultsManager.swift in Sources */,
 				412413BA20013D84008B33BF /* UIButton+TouchInsets.swift in Sources */,
 				412413B120013D84008B33BF /* UIColor+Hex.swift in Sources */,

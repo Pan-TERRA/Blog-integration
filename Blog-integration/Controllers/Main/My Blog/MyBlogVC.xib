@@ -20,6 +20,7 @@
             <connections>
                 <outlet property="emailLabel" destination="ZLy-qE-dyW" id="ZOh-Rl-pUY"/>
                 <outlet property="nameLabel" destination="JAv-GF-uoZ" id="qrg-Ip-E5h"/>
+                <outlet property="tableView" destination="So7-Bn-Omb" id="pNU-td-LLT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,9 +29,14 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="So7-Bn-Omb">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="So7-Bn-Omb">
                     <rect key="frame" x="0.0" y="150" width="375" height="517"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Py1-sr-ETo"/>
+                        <outlet property="delegate" destination="-1" id="Kda-OC-FSl"/>
+                        <outlet property="emptyDataSetSource" destination="-1" id="Xeb-H7-FkH"/>
+                    </connections>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HHQ-cN-IKy">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>

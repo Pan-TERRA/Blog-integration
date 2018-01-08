@@ -13,6 +13,7 @@ class MappableTableVC: BasicVC, UITableViewDelegate, UITableViewDataSource {
     
     struct CellIdentifier {
         static let userCell = "UserCell"
+        static let postCell = "PostCell"
     }
 
     @IBOutlet weak var tableView: UITableView!
@@ -22,7 +23,7 @@ class MappableTableVC: BasicVC, UITableViewDelegate, UITableViewDataSource {
     // MARK: - Properties to override
     
     var interItemSpacing: CGFloat { return 0.0 }
-    var pullToRefreshEnabled: Bool { return true }
+    var pullToRefreshEnabled: Bool { return false }
     
     // MARK: - Refresh & Loadmore
     
@@ -55,7 +56,7 @@ class MappableTableVC: BasicVC, UITableViewDelegate, UITableViewDataSource {
     // MARK: - Set views
     
     func setTableView() {
-        tableView?.registerNibs([])
+        tableView?.registerNibs([CellIdentifier.postCell])
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: CellIdentifier.userCell)
     }
@@ -185,6 +186,13 @@ class MappableTableVC: BasicVC, UITableViewDelegate, UITableViewDataSource {
             cell.textLabel?.text = user.nickname
             
             return cell
+        } else if let post = mappables[indexPath.section] as? PostModel {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.postCell, for: indexPath) as! PostCell
+            
+            cell.post = post
+            
+            return cell
         }
         
         return UITableViewCell()
@@ -192,10 +200,14 @@ class MappableTableVC: BasicVC, UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - TableView Delegate
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//
-//        return 0.0
-//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+
+        if let post = mappables[indexPath.section] as? PostModel {
+            return PostCell.height(for: post)
+        }
+        
+        return 40.0
+    }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return interItemSpacing

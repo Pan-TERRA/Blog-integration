@@ -14,6 +14,7 @@ class PostModel: Mappable {
     var text: String?
     var date: Date?
     
+    var authorName: String?
     var userID: String?
     
     required init?(map: Map) {}
@@ -25,6 +26,7 @@ class PostModel: Mappable {
         date <- (map["date"], DateTransform())
         
         userID <- map["user_id"]
+        authorName <- map["author_name"]
     }
     
 }

@@ -62,7 +62,7 @@ class APIManager {
         
         let postID = UUID().uuidString
         
-        let form = ["text": text, "id": postID, "user_id": user.uid, "date": stringDate]
+        let form = ["text": text, "id": postID, "user_id": user.uid, "date": stringDate, "author_name": user.displayName]
         
         reference.child("posts/\(postID)").setValue(form, withCompletionBlock: { (error, _) in
             
@@ -72,6 +72,20 @@ class APIManager {
                 failure(BlogError(error: error!))
             }
             
+        })
+    }
+    
+    func getMyPosts(success: @escaping (Any)->(), failure: @escaping (BlogError)->()) {
+        getPostsBy(userID: AuthorizationManager.shared.userProfile!.uid, success: success, failure: failure)
+    }
+    
+    func getPostsBy(userID: String, success: @escaping (Any)->(), failure: @escaping (BlogError)->()) {
+        reference.child("posts").queryOrdered(byChild: "user_id").queryEqual(toValue: userID).observeSingleEvent(of: .value, with: { snapshot in
+            
+            success(snapshot.value!)
+            
+        }, withCancel: { error in
+            failure(BlogError(error: error))
         })
     }
 
