@@ -14,7 +14,11 @@ class ProfileModel: Mappable {
     var nickname: String?
     var email: String?
     
-    required init?(map: Map) {}
+    required init?(map: Map) {
+        if map.JSON["id"] == nil || map.JSON["nickname"] == nil || map.JSON["email"] == nil {
+            return nil
+        }
+    }
     
     func mapping(map: Map) {
         

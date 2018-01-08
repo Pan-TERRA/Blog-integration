@@ -17,7 +17,12 @@ class PostModel: Mappable {
     var authorName: String?
     var userID: String?
     
-    required init?(map: Map) {}
+    init() {}
+    required init?(map: Map) {
+        if map.JSON["id"] == nil {
+            return nil
+        }
+    }
     
     func mapping(map: Map) {
         
