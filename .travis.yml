@@ -2,3 +2,6 @@ language: objective-c
 osx_image: xcode9.2
 xcode_project: Blog-integration.xcworkspace
 xcode_scheme: Blog-integration
+
+script:
+    - xcodebuild clean build -sdk iphonesimulator -workspace Blog-integration.xcworkspace -scheme Blog-integration CODE_SIGNING_REQUIRED=NO
