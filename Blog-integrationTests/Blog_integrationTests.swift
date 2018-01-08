@@ -66,4 +66,18 @@ class Blog_integrationTests: XCTestCase {
         XCTAssertEqual(optionalUser03?.nickname, fullJSON["nickname"])
     }
     
+    func testMockTopUsersVC() {
+        
+        let topUserVC = TopUsersVC()
+        
+        topUserVC.apiManager = MockAPIManager()
+        
+        topUserVC.loadDataFromServer(completionHandler: { error in
+            
+            XCTAssertNil(error)
+            
+            XCTAssertFalse(topUserVC.mappables.isEmpty)
+        })
+    }
+    
 }

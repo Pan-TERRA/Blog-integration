@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B2B18421216B07F1B4BB461 /* Pods_Blog_integrationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717639068FA513F60634A426 /* Pods_Blog_integrationTests.framework */; };
+		41219A942003B911000585C7 /* MockAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41219A932003B911000585C7 /* MockAPIManager.swift */; };
 		412413412001388F008B33BF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412413402001388F008B33BF /* Constants.swift */; };
 		4124135920013B64008B33BF /* MappableTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124134320013B64008B33BF /* MappableTableVC.swift */; };
 		4124135A20013B64008B33BF /* BasicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124134420013B64008B33BF /* BasicVC.swift */; };
@@ -83,6 +84,7 @@
 /* Begin PBXFileReference section */
 		0C5A2462AF09E27A195D2429 /* Pods_Blog_integration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blog_integration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C4EBC429F3D11BA69776E7 /* Pods-Blog-integrationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blog-integrationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blog-integrationTests/Pods-Blog-integrationTests.release.xcconfig"; sourceTree = "<group>"; };
+		41219A932003B911000585C7 /* MockAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIManager.swift; sourceTree = "<group>"; };
 		412413402001388F008B33BF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4124134320013B64008B33BF /* MappableTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappableTableVC.swift; sourceTree = "<group>"; };
 		4124134420013B64008B33BF /* BasicVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicVC.swift; sourceTree = "<group>"; };
@@ -390,6 +392,7 @@
 			isa = PBXGroup;
 			children = (
 				414F553620011AC900CA97AE /* Blog_integrationTests.swift */,
+				41219A932003B911000585C7 /* MockAPIManager.swift */,
 				414F553820011AC900CA97AE /* Info.plist */,
 			);
 			path = "Blog-integrationTests";
@@ -794,6 +797,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41219A942003B911000585C7 /* MockAPIManager.swift in Sources */,
 				414F553720011AC900CA97AE /* Blog_integrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
