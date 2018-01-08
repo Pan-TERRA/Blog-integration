@@ -4,10 +4,23 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Blog-integration.xcscheme</key>
+		<key>Blog-integration.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>15</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>414F551D20011AC900CA97AE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>414F553120011AC900CA97AE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
