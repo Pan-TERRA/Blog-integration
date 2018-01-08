@@ -44,4 +44,26 @@ class Blog_integrationTests: XCTestCase {
         XCTAssertTrue(blogVC!.mappables.isEmpty)
     }
     
+    func testFailableInitializers() {
+        
+        let blankJSON = [String: Any]()
+        let optionalUser01 = ProfileModel(JSON: blankJSON)
+        XCTAssertNil(optionalUser01)
+        
+        let particularJSON = ["id": UUID().uuidString,
+                              "nickname": "Testable nickname"]
+        let optionalUser02 = ProfileModel(JSON: particularJSON)
+        XCTAssertNil(optionalUser02)
+        
+        let fullJSON = ["id": UUID().uuidString,
+                        "nickname": "Testable nickname",
+                        "email": "test.email@gmail.com"]
+        let optionalUser03 = ProfileModel(JSON: fullJSON)
+        XCTAssertNotNil(optionalUser03)
+        
+        XCTAssertEqual(optionalUser03?.uid, fullJSON["id"])
+        XCTAssertEqual(optionalUser03?.email, fullJSON["email"])
+        XCTAssertEqual(optionalUser03?.nickname, fullJSON["nickname"])
+    }
+    
 }
