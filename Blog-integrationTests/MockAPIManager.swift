@@ -28,4 +28,22 @@ class MockAPIManager: APIManager {
         success(successValue as Any)
     }
     
+      override func getPostsBy(userID: String, success: @escaping (Any) -> (), failure: @escaping (BlogError) -> ()) {
+        
+        var successValue = [String: Any]()
+        
+        (0..<5+arc4random_uniform(15)).forEach({ index in
+            
+            let id = UUID().uuidString
+            let postJSON = ["id": id,
+                            "text": UUID().uuidString,
+                            "author_name": UUID().uuidString,
+                            "user_id": UUID().uuidString]
+            
+            successValue[id] = postJSON
+        })
+        
+        success(successValue as Any)
+    }
+    
 }
