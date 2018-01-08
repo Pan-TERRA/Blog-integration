@@ -80,4 +80,22 @@ class Blog_integrationTests: XCTestCase {
         })
     }
     
+    func testMockAnotherBlogVC() {
+        
+        let blogVC = AnotherBlogVC()
+        
+        blogVC.user = ProfileModel(JSON: ["id": UUID().uuidString,
+                                            "email": UUID().uuidString,
+                                            "nickname": UUID().uuidString])
+        
+        blogVC.apiManager = MockAPIManager()
+        
+        blogVC.loadDataFromServer(completionHandler: { error in
+            
+            XCTAssertNil(error)
+            
+            XCTAssertFalse(blogVC.mappables.isEmpty)
+        })
+    }
+    
 }
