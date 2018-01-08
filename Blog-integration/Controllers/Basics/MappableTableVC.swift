@@ -19,6 +19,7 @@ class MappableTableVC: BasicVC, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     var mappables = [Mappable]()
+    var apiManager = APIManager()
     
     // MARK: - Properties to override
     

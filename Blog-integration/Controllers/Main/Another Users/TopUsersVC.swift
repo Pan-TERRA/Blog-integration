@@ -35,7 +35,7 @@ class TopUsersVC: MappableTableVC {
         
         mappables.removeAll()
         
-        APIManager().getUsers(success: { [weak self] response in
+        apiManager.getUsers(success: { [weak self] response in
             
             guard let items = response as? [String: Any] else { return }
             

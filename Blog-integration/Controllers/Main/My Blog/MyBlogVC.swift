@@ -38,7 +38,7 @@ class MyBlogVC: MappableTableVC {
         
         mappables.removeAll()
         
-        APIManager().getMyPosts(success: { [weak self] response in
+        apiManager.getMyPosts(success: { [weak self] response in
             
             guard let items = response as? [String: Any] else { return }
             
