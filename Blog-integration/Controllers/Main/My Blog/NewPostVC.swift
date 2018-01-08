@@ -42,7 +42,7 @@ class NewPostVC: BasicVC {
         
         startLoading()
         
-        apiManager.newPost(text: text, success: { [weak self] response in
+        APIManager().newPost(text: text, success: { [weak self] response in
             self?.stopLoading()
             print(response)
             self?.navigationController?.popViewController(animated: true)
