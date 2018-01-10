@@ -8,4 +8,4 @@ before_install:
 - gem install xcpretty -N --no-ri --no-rdoc
 
 script:
-    - xcodebuild clean build -sdk iphonesimulator -workspace Blog-integration.xcworkspace -scheme Blog-integration CODE_SIGNING_REQUIRED=NO | xcpretty
+    - xcodebuild clean build -sdk iphonesimulator -workspace Blog-integration.xcworkspace -scheme Blog-integration CODE_SIGNING_REQUIRED=NO | xcpretty && xcodebuild test -sdk iphonesimulator -workspace Blog-integration.xcworkspace -scheme Blog-integration CODE_SIGNING_REQUIRED=NO | xcpretty
