@@ -4,10 +4,8 @@ xcode_project: Blog-integration.xcworkspace
 xcode_scheme: Blog-integration
 
 before_install:
-- brew update
-- brew install xctool
+
 - gem install xcpretty -N --no-ri --no-rdoc
 
 script:
-    - travis_retry xcodebuild clean build -sdk iphonesimulator -workspace Blog-integration.xcworkspace -scheme Blog-integration CODE_SIGNING_REQUIRED=NO | xcpretty
-    - xctool -workspace Blog-integration.xcworkspace -scheme Blog-integration test
+    - xcodebuild clean build -sdk iphonesimulator -workspace Blog-integration.xcworkspace -scheme Blog-integration CODE_SIGNING_REQUIRED=NO | xcpretty
