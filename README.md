@@ -1,5 +1,7 @@
 # Blog-integration
 
+[![Build Status](https://travis-ci.org/Pan-TERRA/Blog-integration.svg?branch=master)](https://travis-ci.org/Pan-TERRA/Blog-integration)
+
 ### Требования к установке
 
 * Устройство с MacOS и xCode 9
